@@ -20,6 +20,4 @@ public class InfantryUnit extends Unit {
         return this.health;
     }
 
-    public static void main(String[] args) {
-    }
 }

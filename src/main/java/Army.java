@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Army {
     String name;
@@ -23,8 +24,43 @@ public class Army {
         return units.add(unit);
     }
 
-//public boolean addAll(List<Unit> units) {
-//    return ;
-//}
+    public boolean addAll(List<Unit> units) {
+        return units.addAll(units);
+    }
 
+    public boolean remove(Unit unit) {
+        return units.remove(unit);
+    }
+
+    public boolean hasUnits() {
+        return !units.isEmpty();
+    }
+
+    public List<Unit> getAllUnits() {
+        return units;
+    }
+
+    public Unit getRandom() {
+        Random rand = new Random();
+        return units.get(rand.nextInt());
+    }
+
+    public String toString() {
+        return units.toString();
+    }
+
+    public boolean equals(Object object) {
+        return object.equals(units);
+    }
+
+    public int hashCode() {
+        return units.hashCode();
+    }
+
+    public static void main(String[] args) {
+        Army army = new Army("Petter kanin");
+        RangedUnit rangedUnit = new RangedUnit("Wow", 10);
+        System.out.println(army.hasUnits());
+
+    }
 }

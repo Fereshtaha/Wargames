@@ -14,23 +14,20 @@ public class RangedUnit extends Unit{
 
     // fordel fordi den kan angripe fra en avstand
     public int getAttackBonus() {
-        return 3;
+        return this.attack - 3;
     }
+
 
     // basert på avstanden på fienden. Returnerer en betydelig verdi første gangen enheten blir angrepet (f.eks. 6) . Verdien blir
     // redusert neste gang den blir angrepet (til f.eks. 4). Fra og med det tredje angrepet skal det returneres en standard
     // verdi (f.eks. 2).
     public int getResistBonus() {
         if (this.getAttack() == 1) {
-            return 6;}
+            return this.armor + 6;}
         else if (this.getAttack() == 2) {
-            return 4;}
+            return this.armor + 4;}
         else {
-            return 2;
-        }
+            return this. armor + 2;}
     }
 
-    public static void main(String[] args) {
-
-    }
 }
