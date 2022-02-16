@@ -1,13 +1,20 @@
 public abstract class Unit {
     // navnet til spilleren
-    String name;
+    private String name;
     // verdien reduseres når enheten blir angrepet, og kan aldri være lavere enn 0
-    int health;
+    private int health;
     // representerer enhetens våpen
-    int attack;
+    private int attack;
     // forsvarsverdi som beskytter under et angrep
-    int armor;
+    private int armor;
 
+    /** *
+
+     * @param name
+     * @param health
+     * @param attack
+     * @param armor
+     */
     public Unit(String name, int health, int attack, int armor) {
         this.name = name;
         this.health = health;
@@ -15,18 +22,14 @@ public abstract class Unit {
         this.armor = armor;
     }
 
-
-    public Unit(String name, int health) {
-        this.name = name;
-        this.health = health;
-    }
-
-
     public void attack(Unit opponent) {
-        opponent.setHealth(Math.max(opponent.getHealth(),
-                opponent.getHealth()-(this.getAttackBonus() - this.attack)
-                        + (opponent.armor + opponent.getResistBonus())
-        ));
+        int healthleft = opponent.getHealth()-(this.getAttackBonus() + this.attack)
+                + (opponent.getArmor() + opponent.getResistBonus());
+        if (healthleft <= 0) {
+            opponent.setHealth(0);
+        } else {
+            opponent.setHealth(healthleft);
+        }
     }
 
     //returnerer navn
@@ -60,6 +63,11 @@ public abstract class Unit {
     }
 
     // Legges til angrepsverdie nnår man angriper en annen enhet
+
+    /**
+     *
+     * @return
+     */
     abstract public int getAttackBonus();
 
     //Legges til forsvarsverdien til enheten som blir angrepet

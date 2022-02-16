@@ -9,9 +9,7 @@ public class RangedUnit extends Unit{
 
     // forenklet konstruktør
     public RangedUnit(String name, int health) {
-        super(name, health);
-        this.attack = 15;
-        this.armor = 8;
+        super(name, health, 15, 8);
     }
 
     // fordel fordi den kan angripe fra en avstand

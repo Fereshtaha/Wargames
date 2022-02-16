@@ -7,9 +7,7 @@ public class CavalryUnit extends Unit {
 
     // den forenklede
     public CavalryUnit(String name, int health) {
-        super(name, health);
-        this.attack = 20;
-        this.armor = 12;
+        super(name, health, 20, 12);
     }
 
     // Enheten har en styrke første gang den angriper og i nærkamp. Returnerer en verdi som representerer disse fordelene

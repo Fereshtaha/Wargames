@@ -46,9 +46,16 @@ public class Army {
 
     public Unit getRandom() {
         Random rand = new Random();
-        return units.get(rand.nextInt());
+        return units.get(rand.nextInt(this.units.size()));
     }
 
+    @Override
+    public String toString() {
+        return "Army{" +
+                "name='" + name + '\'' +
+                ", units=" + units +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -63,14 +70,6 @@ public class Army {
         return Objects.hash(name, units);
     }
 
-
-    @Override
-    public String toString() {
-        return "Army{" +
-                "name='" + name + '\'' +
-                ", units=" + units +
-                '}';
-    }
 
     public static void main(String[] args) {
 
