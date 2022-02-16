@@ -6,13 +6,17 @@ public class RangedUnitTest {
     @Test
     void test_getAttackBonus() {
         RangedUnit rangedUnit = new RangedUnit("Swordman", 20);
-        assertEquals(12, rangedUnit.getAttackBonus());
+        assertEquals(3, rangedUnit.getAttackBonus());
     }
 
     @Test
     void test_getResistBonus() {
-        RangedUnit rangedUnit = new RangedUnit("Swordman", 20);
-        assertEquals(34,rangedUnit.getResistBonus());
+        RangedUnit rangedUnit = new RangedUnit("Swordwoman", 25);
+        assertEquals(6,rangedUnit.getResistBonus());
+        assertEquals(4,rangedUnit.getResistBonus());
+        assertEquals(2,rangedUnit.getResistBonus());
+
+
 
     }
 }
