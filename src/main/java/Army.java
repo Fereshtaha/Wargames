@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
+/**
+ *
+ */
 public class Army {
     String name;
     List<Unit> units = new ArrayList<Unit>();
@@ -70,9 +73,6 @@ public class Army {
     }
 
     public static void main(String[] args) {
-        Army army = new Army("Petter kanin");
-        RangedUnit rangedUnit = new RangedUnit("Wow", 10);
-        System.out.println(army.hasUnits());
 
     }
 }

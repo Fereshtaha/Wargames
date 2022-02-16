@@ -1,3 +1,5 @@
+import org.w3c.dom.ranges.Range;
+
 public class RangedUnit extends Unit{
 
     public RangedUnit(String name, int health, int armor, int attack) {
@@ -14,7 +16,8 @@ public class RangedUnit extends Unit{
 
     // fordel fordi den kan angripe fra en avstand
     public int getAttackBonus() {
-        return this.attack - 3;
+        this.health = this.attack - 3;
+        return this.health;
     }
 
 
@@ -22,12 +25,20 @@ public class RangedUnit extends Unit{
     // redusert neste gang den blir angrepet (til f.eks. 4). Fra og med det tredje angrepet skal det returneres en standard
     // verdi (f.eks. 2).
     public int getResistBonus() {
-        if (this.getAttack() == 1) {
-            return this.armor + 6;}
-        else if (this.getAttack() == 2) {
-            return this.armor + 4;}
+        if (this.getAttack() == 15) {
+            this.health = this.health + this.armor + 6;
+            return this.health;}
+        else if (this.getAttack() == 14) {
+            this.health = this.health + this.armor + 4;
+            return this.health;}
         else {
-            return this. armor + 2;}
+            this.health = this.health + this.armor + 2;
+            return this.health;}
+    }
+
+    public static void main(String[] args) {
+        RangedUnit rangedUnit = new RangedUnit("Swordman", 20);
+        System.out.println(rangedUnit.getAttack());
     }
 
 }

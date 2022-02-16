@@ -49,8 +49,14 @@ public abstract class Unit {
         this.health = health;
     }
 
-    public String toString(String name) {
-        return name.toString();
+    @Override
+    public String toString() {
+        return "Unit{" +
+                "name='" + name + '\'' +
+                ", health=" + health +
+                ", attack=" + attack +
+                ", armor=" + armor +
+                '}';
     }
 
     // Legges til angrepsverdie nnår man angriper en annen enhet
@@ -61,6 +67,7 @@ public abstract class Unit {
 
 
     public static void main(String[] args) {
+
 
     }
 
