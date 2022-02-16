@@ -11,13 +11,11 @@ public class InfantryUnit extends Unit {
     }
 
     public int getAttackBonus() {
-        this.health = this.health - this.attack;
-        return this.health;
+        return 2;
     }
 
     public int getResistBonus() {
-        this.health = this.health + this.armor;
-        return this.health;
+        return 1;
     }
 
 }
