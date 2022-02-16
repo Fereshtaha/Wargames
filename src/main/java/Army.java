@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class Army {
@@ -45,16 +46,27 @@ public class Army {
         return units.get(rand.nextInt());
     }
 
-    public String toString() {
-        return units.toString();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Army army = (Army) o;
+        return Objects.equals(name, army.name) && Objects.equals(units, army.units);
     }
 
-    public boolean equals(Object object) {
-        return object.equals(units);
-    }
-
+    @Override
     public int hashCode() {
-        return units.hashCode();
+        return Objects.hash(name, units);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Army{" +
+                "name='" + name + '\'' +
+                ", units=" + units +
+                '}';
     }
 
     public static void main(String[] args) {
