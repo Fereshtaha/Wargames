@@ -10,10 +10,11 @@ public abstract class Unit {
 
     /** *
 
-     * @param name
-     * @param health
-     * @param attack
-     * @param armor
+     * @param name et kort beskrivende navn, f.eks. "Swordman" eller "Archer"
+     * @param health en verdi som angir helsa til enheten.
+     *               Verdien reduseres når enheten blir angrepet, og kan aldri være lavere enn 0
+     * @param attack en angrepsverdi som representerer enhetens våpen
+     * @param armor en forsvarsverdi som beskytter under et angrep
      */
     public Unit(String name, int health, int attack, int armor) {
         this.name = name;
@@ -22,6 +23,10 @@ public abstract class Unit {
         this.armor = armor;
     }
 
+    /**
+     *
+     * @param opponent den andre uniten som blir angrepet
+     */
     public void attack(Unit opponent) {
         int healthleft = opponent.getHealth()-(this.getAttackBonus() + this.attack)
                 + (opponent.getArmor() + opponent.getResistBonus());

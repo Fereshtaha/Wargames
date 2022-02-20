@@ -1,3 +1,7 @@
+/**
+ * Infantry Unit klassen returnerer attack bonus 2, og resist bonus 1
+ */
+
 public class InfantryUnit extends Unit {
 
     public InfantryUnit(String name, int health, int armor, int attack) {

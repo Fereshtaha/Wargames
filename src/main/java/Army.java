@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Random;
 
 /**
- *
+ *Army klassen lager armeer med folk som
  */
 public class Army {
     String name;
@@ -71,7 +71,5 @@ public class Army {
     }
 
 
-    public static void main(String[] args) {
 
-    }
 }

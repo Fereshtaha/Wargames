@@ -1,3 +1,7 @@
+/**
+ * Rangedunit klassen returnerer attack bonus 3.
+ * Resist bonusen er 6 første gangen, 4 andre gangen og 2 alle andre ganger.
+ */
 
 public class RangedUnit extends Unit{
     private int numberOfTimes = 0;
@@ -36,9 +40,6 @@ public class RangedUnit extends Unit{
         }
     }
 
-    public static void main(String[] args) {
-        RangedUnit rangedUnit = new RangedUnit("Swordman", 20);
-        System.out.println(rangedUnit.getAttack());
-    }
+
 
 }

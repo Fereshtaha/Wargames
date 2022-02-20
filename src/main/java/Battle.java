@@ -1,3 +1,6 @@
+/**
+ * Battle klassen simulerer slag mellom to armeer.
+ */
 public class Battle {
     Army armyOne;
     Army armyTwo;
@@ -12,7 +15,7 @@ public class Battle {
     }
 
     /**
-     *
+     * To armeer med ti av hver unit på begge sider.
      */
     private void fillwithdummies() {
         Army humanArmy = new Army("Human army");
@@ -33,6 +36,10 @@ public class Battle {
         }
     }
 
+    /**
+     * To armeer med to unit for å se om simuleringen starter.
+     */
+
     private void fillwithtoes() {
         Army humanArmy = new Army("Human army");
         armyOne = humanArmy;
@@ -46,9 +53,14 @@ public class Battle {
 
     }
 
+    /**
+     * simuleringen av et slag. Forteller underveis om unitene blir fjernet, og hvor mange som er igjen.
+     * Returnerer når kampen er over og hvem som vant.
+     */
+
     public void simulate() {
-        //fillwithdummies();
-        fillwithtoes();
+        fillwithdummies();
+        //fillwithtoes();
         boolean isbattleover = false;
         while (!isbattleover) {
             Unit unit = armyOne.getRandom();
@@ -57,18 +69,22 @@ public class Battle {
             opponent.attack(unit);
             if (unit.getHealth() == 0) {
                 armyOne.remove(armyOne.getRandom());
-                System.out.println("Fjerner en unit fra army one");
-                System.out.println(armyOne.getAllUnits().size());
+                System.out.println("Removing an unit from army one. The number of units left in army one are: "
+                        + armyOne.getAllUnits().size());
+                //System.out.println("Fjerner en unit fra army one");
+                //System.out.println(armyOne.getAllUnits().size());
             }
             if (opponent.getHealth() == 0) {
                 armyTwo.remove(armyTwo.getRandom());
-                System.out.println("Fjerner en unit fra army to");
-                System.out.println(armyTwo.getAllUnits().size());
+                System.out.println("Removing an unit from army one. The number of units left in army two are: " +
+                        armyTwo.getAllUnits().size());
+                //System.out.println("Fjerner en unit fra army to");
+                //System.out.println(armyTwo.getAllUnits().size());
             }
 
             if (!armyOne.hasUnits() || !armyTwo.hasUnits()) {
                 isbattleover = true;
-                System.out.println("Kampen er over");
+                //System.out.println("Kampen er over");
             }
 
             }

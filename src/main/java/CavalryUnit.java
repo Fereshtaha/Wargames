@@ -1,3 +1,8 @@
+/**
+ * Cavarly unit klassen returnerer attackbonusen 6 den første gangen og 2 alle andre ganger.
+ * Resistbonusen returnerer 1.
+ */
+
 public class CavalryUnit extends Unit {
     private int numberOfTimes = 0;
 
