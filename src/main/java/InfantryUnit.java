@@ -1,5 +1,5 @@
 /**
- * Infantry Unit klassen returnerer attack bonus 2, og resist bonus 1
+ * Infantry unit klassen returnerer attack bonus 2 og resist bonus 1.
  */
 
 public class InfantryUnit extends Unit {

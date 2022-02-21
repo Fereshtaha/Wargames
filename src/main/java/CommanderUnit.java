@@ -1,3 +1,7 @@
+/**
+ * Commander unit arver alle egenskapene sine fra Cavalry Unit.
+ */
+
 public class CommanderUnit extends CavalryUnit {
 
     public CommanderUnit(String name, int health, int armor, int attack) {

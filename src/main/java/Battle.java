@@ -10,6 +10,10 @@ public class Battle {
         this.armyTwo = armyTwo;
     }
 
+
+    /**
+     * tom konstruktør for å starte simuleringen uten parametere
+     */
     public Battle() {
 
     }
@@ -40,7 +44,7 @@ public class Battle {
      * To armeer med to unit for å se om simuleringen starter.
      */
 
-    private void fillwithtoes() {
+    private void fillwithtwoes() {
         Army humanArmy = new Army("Human army");
         armyOne = humanArmy;
         Army orchishHorde = new Army("Orcish horde");
@@ -54,13 +58,15 @@ public class Battle {
     }
 
     /**
-     * simuleringen av et slag. Forteller underveis om unitene blir fjernet, og hvor mange som er igjen.
+     * Simuleringen av et slag. Forteller underveis om unitene blir fjernet, og hvor mange som er igjen.
      * Returnerer når kampen er over og hvem som vant.
      */
 
     public void simulate() {
         fillwithdummies();
-        //fillwithtoes();
+        //fillwithtwoes();
+        //Så lenge kampen ikke er over, så skal det fortsette å ta en random unit fra de ulike armeene , som skal
+        //attacke hverandre. Fjerner en unit, hvis den har health lik 0. Printer ut hvor mange units som er igjen.
         boolean isbattleover = false;
         while (!isbattleover) {
             Unit unit = armyOne.getRandom();
@@ -82,12 +88,15 @@ public class Battle {
                 //System.out.println(armyTwo.getAllUnits().size());
             }
 
+            //Hvis enten armyOne eller armyTwo er tom for units, så er kampen over.
+
             if (!armyOne.hasUnits() || !armyTwo.hasUnits()) {
                 isbattleover = true;
                 //System.out.println("Kampen er over");
             }
 
             }
+        // printer ut vinneren
         if (armyOne.hasUnits()) {
             System.out.println("Game over. The winner is "+armyOne.getName());
         }
@@ -96,6 +105,7 @@ public class Battle {
         }
     }
 
+    //Oppretter en instans av battle, setter opp armeene og starter simuleringen.
     public static void main(String[] args) {
         Battle battle = new Battle();
         battle.fillwithdummies();

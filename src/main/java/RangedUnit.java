@@ -1,5 +1,5 @@
 /**
- * Rangedunit klassen returnerer attack bonus 3.
+ * Ranged unit klassen returnerer attack bonus 3.
  * Resist bonusen er 6 første gangen, 4 andre gangen og 2 alle andre ganger.
  */
 
