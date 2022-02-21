@@ -2,8 +2,8 @@
  * Battle klassen simulerer slag mellom to armeer.
  */
 public class Battle {
-    Army armyOne;
-    Army armyTwo;
+    private Army armyOne;
+    private Army armyTwo;
 
     public Battle(Army armyOne,Army armyTwo) {
         this.armyOne = armyOne;

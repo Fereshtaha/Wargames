@@ -9,7 +9,7 @@ public abstract class Unit {
     private int armor;
 
     /** *
-
+     lager en instans av units
      * @param name et kort beskrivende navn, f.eks. "Swordman" eller "Archer"
      * @param health en verdi som angir helsa til enheten.
      *               Verdien reduseres når enheten blir angrepet, og kan aldri være lavere enn 0
@@ -24,7 +24,7 @@ public abstract class Unit {
     }
 
     /**
-     *
+     * attacker en opponent
      * @param opponent den andre uniten som blir angrepet
      */
     public void attack(Unit opponent) {
@@ -37,22 +37,41 @@ public abstract class Unit {
         }
     }
 
-    //returnerer navn
+    /**
+     * returnerer navn
+     */
     public String getName(String name) {
         return name; }
 
+    /**
+     * Gir healthen
+     * @return int health
+     */
     public int getHealth() {
         return this.health;
     }
+
+    /**
+     * Gir attacken
+     * @return int attack
+     */
 
     public int getAttack() {
         return this.attack;
     }
 
+    /**
+     * Gir rustningen
+     * @return int armor
+     */
     public int getArmor() {
         return this.armor;
     }
 
+    /**
+     * Setter hvor mye liv det skal være
+     * @param health hvor mye liv det er
+     */
     public void setHealth(int health) {
         this.health = health;
     }
@@ -70,12 +89,15 @@ public abstract class Unit {
     // Legges til angrepsverdie nnår man angriper en annen enhet
 
     /**
-     *
-     * @return
+     * Gir attack bonusen
+     * @return kommer an på hvilken unit det er
      */
     abstract public int getAttackBonus();
 
-    //Legges til forsvarsverdien til enheten som blir angrepet
+    /**
+     * Gir poeng hvis man klarer å stå imot angrep
+     * @return kommer an på hvilken unit det er
+     */
     abstract public int getResistBonus();
 
 

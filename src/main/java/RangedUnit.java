@@ -4,27 +4,44 @@
  */
 
 public class RangedUnit extends Unit{
+    /**
+     * Antall ganger man angriper vedkommende
+     */
     private int numberOfTimes = 0;
+
+    /**
+     *
+     * @param name navnet til uniten
+     * @param health livet til uniten
+     * @param armor rustningen til uniten
+     * @param attack hvor stor attack uniten har
+     */
 
     public RangedUnit(String name, int health, int armor, int attack) {
         super(name, health, armor, attack);
     }
 
 
-    // forenklet konstruktør
+    /** forenklet konstruktør med attack satt lik 15 og armor lik 8.
+     *
+     */
     public RangedUnit(String name, int health) {
         super(name, health, 15, 8);
     }
 
-    // fordel fordi den kan angripe fra en avstand
+    /** fordel fordi den kan angripe fra en avstand
+     * Returnerer attack bonusen.
+     * @return int 3
+     */
     public int getAttackBonus() {
         return 3;
     }
 
 
-    // basert på avstanden på fienden. Returnerer en betydelig verdi første gangen enheten blir angrepet (f.eks. 6) . Verdien blir
-    // redusert neste gang den blir angrepet (til f.eks. 4). Fra og med det tredje angrepet skal det returneres en standard
-    // verdi (f.eks. 2).
+    /** Basert på avstanden på fienden. Returnerer en betydelig verdi første gangen enheten blir angrepet (f.eks. 6) .
+     * Verdien blir redusert neste gang den blir angrepet (til f.eks. 4).
+     * Fra og med det tredje angrepet skal det returneres en standard
+     verdi (f.eks. 2). */
     public int getResistBonus() {
         if (numberOfTimes == 0) {
             numberOfTimes ++;
