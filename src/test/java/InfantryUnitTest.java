@@ -1,7 +1,8 @@
+import EndrerNavnSenere.InfantryUnit;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InfantryUnitTest {
+class InfantryUnitTest {
 
     @Test
     void test_getAttackBonus() {

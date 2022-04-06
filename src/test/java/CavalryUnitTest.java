@@ -1,7 +1,8 @@
+import EndrerNavnSenere.CavalryUnit;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CavalryUnitTest {
+class CavalryUnitTest {
     @Test
     void test_getAttackBonus() {
         CavalryUnit cavalryUnit = new CavalryUnit("Swordman", 40);
