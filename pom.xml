@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>no.wargames</groupId>
+    <groupId>no.ntnu</groupId>
     <artifactId>Wargames-del-1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -26,7 +26,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
-                    <mainClass>GUI.WargamesGUI</mainClass>
+                    <mainClass>no.ntnu.idatx2001.oblig3.wargames.WargamesGUI</mainClass>
                 </configuration>
             </plugin>
 

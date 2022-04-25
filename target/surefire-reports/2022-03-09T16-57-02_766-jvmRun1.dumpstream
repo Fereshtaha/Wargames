@@ -1,0 +1,15 @@
+# Created at 2022-03-09T16:57:03.275
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'Error occurred during initialization of boot layer'.
+
+# Created at 2022-03-09T16:57:03.276
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'java.lang.module.FindException: Error reading module:'.
+
+# Created at 2022-03-09T16:57:03.277
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '/Users/fereshtaahmadi/NTNU/V?ren 2022/Programmering 2/Oblig 2/Wargames-del-1/target/classes'.
+
+# Created at 2022-03-09T16:57:03.277
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'Caused by: java.lang.module.InvalidModuleDescriptorException:'.
+
+# Created at 2022-03-09T16:57:03.277
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'RangedUnit.class found in top-level directory (unnamed package not allowed in module)'.
+

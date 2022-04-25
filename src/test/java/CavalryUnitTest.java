@@ -1,4 +1,4 @@
-import EndrerNavnSenere.CavalryUnit;
+import no.ntnu.idatx2001.oblig3.wargames.CavalryUnit;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
