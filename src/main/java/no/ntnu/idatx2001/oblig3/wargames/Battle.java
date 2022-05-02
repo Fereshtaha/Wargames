@@ -24,39 +24,8 @@ public class Battle {
      * To armeer med ti av hver unit på begge sider.
      */
     private void fillwithdummies() {
-        Army humanArmy = new Army("Human army");
-        armyOne = humanArmy;
-        Army orchishHorde = new Army("Orcish horde");
-        armyTwo = orchishHorde;
-
-        for (int i = 1; i<=10; i++) {
-            humanArmy.add(new InfantryUnit("Legionnare",100));
-            humanArmy.add(new CavalryUnit("Swordman",100));
-            humanArmy.add(new RangedUnit("Serviceman",100));
-            humanArmy.add(new CommanderUnit("Archer",180));
-            orchishHorde.add(new InfantryUnit("Legionnare", 100));
-            orchishHorde.add(new CavalryUnit("Swordman", 100));
-            orchishHorde.add(new RangedUnit("Serviceman", 100));
-            orchishHorde.add(new CommanderUnit("Archer", 180));
-
-        }
-    }
-
-    /**
-     * To armeer med to unit for å se om simuleringen starter.
-     */
-
-    private void fillwithtwoes() {
-        Army humanArmy = new Army("Human army");
-        armyOne = humanArmy;
-        Army orchishHorde = new Army("Orcish horde");
-        armyTwo = orchishHorde;
-
-        humanArmy.add(new InfantryUnit("Swordman",100, 10, 50));
-        humanArmy.add(new InfantryUnit("Swordman",100, 10, 50));
-        orchishHorde.add(new InfantryUnit("Paperman", 100, 10, 50));
-        orchishHorde.add(new InfantryUnit("Paperman", 100, 10, 50));
-
+        armyOne = DummyDataInitalizr.makeDefaultArmy("Human army");
+        armyTwo = DummyDataInitalizr.makeDefaultArmy("Orcish horde");
     }
 
     /**

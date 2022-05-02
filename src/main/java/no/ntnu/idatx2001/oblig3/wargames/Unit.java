@@ -42,7 +42,7 @@ public abstract class Unit {
     /**
      * returnerer navn
      */
-    public String getName(String name) {
+    public String getName() {
         return name; }
 
     /**

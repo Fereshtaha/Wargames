@@ -3,11 +3,17 @@ package no.ntnu.idatx2001.oblig3.wargames;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * TODO: skriv dokumentasjon her
+ */
+
 public class UnitFactory {
-    private Object Unit;
 
     /**
      * Denne metoden oppretter en Unit basert på type enhet, navn og helseverdi
+     * @param stateOfUnit hvilken unit det er
+     * @param name navnet til uniten
+     * @param health helsen til uniten
      */
     public Unit createUnit(StateOfUnit stateOfUnit, String name,  int health) {
         return switch (stateOfUnit) {
@@ -21,6 +27,10 @@ public class UnitFactory {
     /**
      * Denne metoden returnerer en liste med n antall Units basert på type enhet, navn og helseverdi.
      * Metoden brukes når vi trenger mange enheter av samme type
+     * @param n antall units vi vil legge til
+     * @param stateOfUnit hvilken unit det er
+     * @param name navnet på uniten
+     * @param health helsen til uniten
      */
 
     public List<Unit> createListOfUnits(int n, StateOfUnit stateOfUnit, String name, int health) {

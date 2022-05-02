@@ -12,7 +12,7 @@ public class RangedUnit extends Unit{
     private int numberOfTimes = 0;
 
     /**
-     *
+     * Konstruktør med alle parametere.
      * @param name navnet til uniten
      * @param health livet til uniten
      * @param armor rustningen til uniten

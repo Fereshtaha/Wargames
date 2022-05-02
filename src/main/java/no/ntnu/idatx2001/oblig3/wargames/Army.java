@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 /**
  *Army klassen lager armeer med uniter
  */
+
 public class Army {
     /**
      * private klassevariabler
