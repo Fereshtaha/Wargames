@@ -14,6 +14,9 @@ public class HumanArmyFile {
          */
         try {
             Army humanArmy = new Army("Human army");
+            Army orchidsHorde = new Army("Orchich horde");
+            BufferedWriter writer = new BufferedWriter(new FileWriter("human-army.csv"));
+            writer.write(header);
 
             //for (int i = 1; i<=10; i++) {
                 humanArmy.add(new InfantryUnit("Legionnare", 100));
@@ -21,15 +24,12 @@ public class HumanArmyFile {
                 humanArmy.add(new RangedUnit("Serviceman", 100));
                 humanArmy.add(new CommanderUnit("Archer", 180));
 
-                Army orchidsHorde = new Army("Orchich horde");
                 orchidsHorde.add(new InfantryUnit("Legionnare", 100));
                 orchidsHorde.add(new CavalryUnit("Swordman", 100));
                 orchidsHorde.add(new RangedUnit("Serviceman", 100));
                 orchidsHorde.add(new CommanderUnit("Archer", 180));
 
             //}
-            BufferedWriter writer = new BufferedWriter(new FileWriter("filename.csv"));
-            writer.write(header);
            for (Unit a : humanArmy.getAllUnits()) {
                writer.newLine();
                for (Unit b : humanArmy.getRangedUnits()) {
