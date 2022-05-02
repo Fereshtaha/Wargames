@@ -11,7 +11,16 @@ public class MainController {
     private VBox army1box;
 
     @FXML
-    private Label unit1;
+    private Label cavalryUnit1;
+
+    @FXML
+    private Label commanderUnit1;
+
+    @FXML
+    private Label rangedUnit1;
+
+    @FXML
+    private Label infantryUnit1;
 
     @FXML
     private VBox army2box;
@@ -29,16 +38,16 @@ public class MainController {
     }
 
     /**
-     * Metoden får uniten til å bevege seg
+     * Metoden får de ulike unitene til å bevege seg til midten
      */
     public void setButtonFunctions() {
         button.setOnAction(actionEvent -> {
-            if (!grid.getChildren().contains(unit1)) {
-                grid.add(unit1, 0,0);
+            if (!grid.getChildren().contains(cavalryUnit1)
+            ) {
+                grid.add(cavalryUnit1, 0,0);
             } else {
-                army1box.getChildren().add(unit1);
+                army1box.getChildren().add(cavalryUnit1);
             }
-
         });
     }
 

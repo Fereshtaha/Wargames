@@ -125,20 +125,34 @@ public class Army {
         return Objects.hash(name, units);
     }
 
+    /**
+     * @return instansene i units som er av typen Infantry units.
+     */
     public List<Unit> getInfantryUnits() {
         return this.units.stream().filter(infantryUnit ->
                 infantryUnit.getAttack() == 15 && infantryUnit.getArmor() == 10).collect(Collectors.toList());
     }
+
+    /**
+     * @return instansene i units som er av typen Cavalry units.
+     */
 
     public List<Unit> getCavalryUnits() {
         return this.units.stream().filter(cavalryUnit ->
                 cavalryUnit.getAttack() == 20 && cavalryUnit.getArmor() == 12).collect(Collectors.toList());
     }
 
+    /**
+     * @return instansene i units som er av typen Ranged units.
+     */
     public List<Unit> getRangedUnits() {
         return this.units.stream().filter(rangedUnit ->
                 rangedUnit.getArmor() == 12 && rangedUnit.getAttack() == 20).collect(Collectors.toList());
     }
+
+    /**
+     * @return instansene i units som er av typen Commander units.
+     */
 
     public List<Unit> getCommanderUnits() {
         return this.units.stream().filter(commanderUnits ->

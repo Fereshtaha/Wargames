@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="416.0" fitWidth="614.0" layoutX="-7.0" layoutY="-9.0">
          <image>
-            <Image url="@../Oblig%202/Wargames-del-1/src/main/resources/images/Background.jpeg" />
+            <Image url="../images/Background.jpeg" />
          </image>
       </ImageView>
       <Button blendMode="LIGHTEN" layoutX="158.0" layoutY="178.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-font-size: 26; -fx-font-family: Copperplate, fantasy;" text="Click here to play " />

@@ -5,9 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.*;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import no.ntnu.idatx2001.oblig3.wargames.controller.MainController;
 
@@ -23,13 +21,7 @@ public class WargamesGUI extends Application {
         mainController.setButtonFunctions();
         primaryStage.setTitle("Card game");
 
-        Button startButton = new Button("START");
-
-        Text text = new Text("Press the button to begin the game");
-
         BorderPane rootNode = new BorderPane();
-        rootNode.setCenter(startButton);
-        rootNode.setCenter(text);
         rootNode.setMinSize(500, 300);
         rootNode.setPadding(new Insets(10,10,10,10));
 

@@ -30,14 +30,14 @@ public class Battle {
         armyTwo = orchishHorde;
 
         for (int i = 1; i<=10; i++) {
-            humanArmy.add(new InfantryUnit("Swordman",100));
+            humanArmy.add(new InfantryUnit("Legionnare",100));
             humanArmy.add(new CavalryUnit("Swordman",100));
-            humanArmy.add(new RangedUnit("Swordman",100));
-            humanArmy.add(new CommanderUnit("Swordman",180));
-            orchishHorde.add(new InfantryUnit("Paperman", 100));
-            orchishHorde.add(new CavalryUnit("Paperman", 100));
-            orchishHorde.add(new RangedUnit("Paperman", 100));
-            orchishHorde.add(new CommanderUnit("Paperman", 180));
+            humanArmy.add(new RangedUnit("Serviceman",100));
+            humanArmy.add(new CommanderUnit("Archer",180));
+            orchishHorde.add(new InfantryUnit("Legionnare", 100));
+            orchishHorde.add(new CavalryUnit("Swordman", 100));
+            orchishHorde.add(new RangedUnit("Serviceman", 100));
+            orchishHorde.add(new CommanderUnit("Archer", 180));
 
         }
     }
