@@ -10,6 +10,8 @@ public abstract class Unit {
     // forsvarsverdi som beskytter under et angrep
     private int armor;
 
+    protected Terrain terrain;
+
     /** *
      lager en instans av units
      * @param name et kort beskrivende navn, f.eks. "Swordman" eller "Archer"
@@ -23,6 +25,14 @@ public abstract class Unit {
         this.health = health;
         this.attack = attack;
         this.armor = armor;
+    }
+
+    public Unit(String name, int health, int attack, int armor, Terrain terrain) {
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.armor = armor;
+        this.terrain = terrain;
     }
 
     /**
@@ -76,6 +86,14 @@ public abstract class Unit {
      */
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public void setTerrain(Terrain terrain) {
+        this.terrain = terrain;
+    }
+
+    public Terrain getTerrain(Terrain terrain) {
+        return this.terrain = terrain;
     }
 
     @Override

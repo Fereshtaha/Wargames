@@ -12,12 +12,10 @@ public class Battle {
         this.armyTwo = armyTwo;
     }
 
-
     /**
      * tom konstruktør for å starte simuleringen uten parametere
      */
     public Battle() {
-
     }
 
     /**
@@ -32,7 +30,6 @@ public class Battle {
      * Simuleringen av et slag. Forteller underveis om unitene blir fjernet, og hvor mange som er igjen.
      * Returnerer når kampen er over og hvem som vant.
      */
-
     public void simulate() {
         fillwithdummies();
         //fillwithtwoes();

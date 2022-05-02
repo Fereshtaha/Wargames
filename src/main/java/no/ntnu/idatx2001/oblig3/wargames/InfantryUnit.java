@@ -7,15 +7,14 @@ package no.ntnu.idatx2001.oblig3.wargames;
 public class InfantryUnit extends Unit {
 
     /**
-     *
      * @param name navnet til uniten
      * @param health livet til uniten
      * @param armor rustningen til uniten
      * @param attack angrepet til uniten
      */
 
-    public InfantryUnit(String name, int health, int armor, int attack) {
-        super(name, health, attack, armor);
+    public InfantryUnit(String name, int health, int armor, int attack, Terrain terrain) {
+        super(name, health, attack, armor, terrain);
     }
 
     /**
@@ -29,18 +28,26 @@ public class InfantryUnit extends Unit {
 
     /**
      * Får attack bonusen
-     * @return int 2
+     * @return hvis det er skog, så returnerer den 4. Ellers returnerer den 2.
      */
     public int getAttackBonus() {
-        return 2;
+        if (terrain == Terrain.FOREST) {
+            return 4;
+        } else {
+            return 2;
+        }
     }
 
     /**
      * Får resist bonusen
-     * @return int 1
+     * @return hvis det er skog, så returnerer den 2. Ellers returnerer den 2.
      */
     public int getResistBonus() {
-        return 1;
+        if (terrain == Terrain.FOREST) {
+            return 2;
+        } else {
+            return 1;
+        }
     }
 
 }

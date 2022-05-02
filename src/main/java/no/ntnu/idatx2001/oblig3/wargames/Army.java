@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
  */
 
 public class Army {
+
     /**
      * private klassevariabler
      */
@@ -21,7 +22,6 @@ public class Army {
      * enkel konstruktør
      * @param name navnet til armeen
      */
-
     public Army(String name) {
         this.name = name;
     }
