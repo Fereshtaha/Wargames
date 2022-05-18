@@ -11,6 +11,7 @@ public class InfantryUnit extends Unit {
      * @param health livet til uniten
      * @param armor rustningen til uniten
      * @param attack angrepet til uniten
+     * @param terrain terrenget til uniten
      */
 
     public InfantryUnit(String name, int health, int armor, int attack, Terrain terrain) {
@@ -31,23 +32,22 @@ public class InfantryUnit extends Unit {
      * @return hvis det er skog, så returnerer den 4. Ellers returnerer den 2.
      */
     public int getAttackBonus() {
+        int totalAmountBonus = 2;
         if (getTerrain() == Terrain.FOREST) {
-            return 4;
-        } else {
-            return 2;
-        }
+            totalAmountBonus += 2;
+        } return totalAmountBonus;
     }
 
     /**
      * Får resist bonusen
-     * @return hvis det er skog, så returnerer den 2. Ellers returnerer den 2.
+     * @return hvis det er skog, så returnerer den 2. Ellers returnerer den 1.
      */
     public int getResistBonus() {
+        int totalAmount = 1;
         if (getTerrain() == Terrain.FOREST) {
-            return 2;
-        } else {
-            return 1;
+            totalAmount +=1 ;
         }
+        return totalAmount;
     }
 
 }

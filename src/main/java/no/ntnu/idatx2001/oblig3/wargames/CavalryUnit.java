@@ -19,6 +19,12 @@ public class CavalryUnit extends Unit {
      * @param attack hvor mye objektet den slår med skader
      * @param armor hvor mye uniten klarer å beskytte seg
      */
+    public CavalryUnit(String name, int health, int attack, int armor, Terrain terrain) {
+        super(name, health, attack, armor, terrain);
+        this.numberOfTimes = 0;
+        this.attackBonus = 2;
+    }
+
     public CavalryUnit(String name, int health, int attack, int armor) {
         super(name, health, attack, armor);
         this.numberOfTimes = 0;
@@ -38,6 +44,7 @@ public class CavalryUnit extends Unit {
 
     /** Enheten har en styrke første gang den angriper og i nærkamp. Returnerer en verdi som representerer disse fordelene
      * (f.eks. 4+2 ved første angrep, deretter 2)
+     *  Enheten har en fordel hvis det er slette (PLAINS)
      */
     public int getAttackBonus() {
         int totalAttackBonus = attackBonus;
