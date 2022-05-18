@@ -10,7 +10,7 @@ public abstract class Unit {
     // forsvarsverdi som beskytter under et angrep
     private int armor;
 
-    protected Terrain terrain;
+    private Terrain terrain;
 
     /** *
      lager en instans av units
@@ -26,6 +26,20 @@ public abstract class Unit {
         this.attack = attack;
         this.armor = armor;
     }
+
+    protected Terrain getTerrain() {
+        return terrain;
+    }
+
+    /**
+     * lager en instans av units med terreng inkludert
+     * @param name et kort beskrivende navn, f.eks. "Swordman" eller "Archer"
+     * @param health en verdi som angir helsa til enheten.
+     *               Verdien reduseres når enheten blir angrepet, og kan aldri være lavere enn 0
+     * @param attack en angrepsverdi som representerer enhetens våpen
+     * @param armor en forsvarsverdi som beskytter under et angrep
+     * @param terrain valg av terreng. Kan enten være ås (HILL), slette (PLAINS) eller skog (FOREST).
+     */
 
     public Unit(String name, int health, int attack, int armor, Terrain terrain) {
         this.name = name;

@@ -31,7 +31,7 @@ public class InfantryUnit extends Unit {
      * @return hvis det er skog, så returnerer den 4. Ellers returnerer den 2.
      */
     public int getAttackBonus() {
-        if (terrain == Terrain.FOREST) {
+        if (getTerrain() == Terrain.FOREST) {
             return 4;
         } else {
             return 2;
@@ -43,7 +43,7 @@ public class InfantryUnit extends Unit {
      * @return hvis det er skog, så returnerer den 2. Ellers returnerer den 2.
      */
     public int getResistBonus() {
-        if (terrain == Terrain.FOREST) {
+        if (getTerrain() == Terrain.FOREST) {
             return 2;
         } else {
             return 1;

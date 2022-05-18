@@ -47,11 +47,10 @@
    <top>
       <HBox alignment="CENTER" prefHeight="90.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="113.0" text="Armys left:" textFill="WHITE" />
-            <Label prefHeight="52.0" prefWidth="54.0" text="Label" textFill="WHITE" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="79.0" text="Armys left:" textFill="WHITE" />
+            <Label prefHeight="52.0" prefWidth="138.0" textFill="WHITE" />
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="95.0" text="Armys left:" textFill="WHITE" />
-            <Label prefHeight="45.0" prefWidth="62.0" text="Label" textFill="WHITE" />
-            <Label prefHeight="36.0" prefWidth="67.0" text="Label" textFill="WHITE" />
+            <Label prefHeight="45.0" prefWidth="62.0" textFill="WHITE" />
          </children>
       </HBox>
    </top>

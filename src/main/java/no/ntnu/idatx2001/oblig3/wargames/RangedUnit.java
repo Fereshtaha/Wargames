@@ -37,10 +37,10 @@ public class RangedUnit extends Unit{
      * Ellers returnerer den 3.
      */
     public int getAttackBonus() {
-        if (terrain == Terrain.HILL) {
+        if (getTerrain() == Terrain.HILL) {
             return 4;
         }
-        if (terrain == Terrain.FOREST) {
+        if (getTerrain() == Terrain.FOREST) {
             return 2;
         }
         else {
