@@ -23,7 +23,7 @@ public class Battle {
      */
     private void fillwithdummies() {
         armyOne = DummyDataInitalizr.makeDefaultArmy("Human army");
-        armyTwo = DummyDataInitalizr.makeDefaultArmy("Orcish horde");
+        armyTwo = DummyDataInitalizr.makeDefaultArmy("Orchids horde");
     }
 
     /**
@@ -32,7 +32,6 @@ public class Battle {
      */
     public void simulate() {
         fillwithdummies();
-        //fillwithtwoes();
         //Så lenge kampen ikke er over, så skal det fortsette å ta en random unit fra de ulike armeene , som skal
         //attacke hverandre. Fjerner en unit, hvis den har health lik 0. Printer ut hvor mange units som er igjen.
         boolean isbattleover = false;
@@ -55,9 +54,7 @@ public class Battle {
                 //System.out.println("Fjerner en unit fra army to");
                 //System.out.println(armyTwo.getAllUnits().size());
             }
-
             //Hvis enten armyOne eller armyTwo er tom for units, så er kampen over.
-
             if (!armyOne.hasUnits() || !armyTwo.hasUnits()) {
                 isbattleover = true;
                 //System.out.println("Kampen er over");
@@ -66,10 +63,10 @@ public class Battle {
             }
         // printer ut vinneren
         if (armyOne.hasUnits()) {
-            System.out.println("Game over. The winner is "+armyOne.getName());
+            System.out.println("Game over. The winner is " + armyOne.getName());
         }
         if (armyTwo.hasUnits()) {
-            System.out.println("Game over. The winner is "+armyTwo.getName());
+            System.out.println("Game over. The winner is " + armyTwo.getName());
         }
     }
 
