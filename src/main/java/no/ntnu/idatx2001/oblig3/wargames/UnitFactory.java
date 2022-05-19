@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TODO: skriv dokumentasjon her
+ * Anvender Factory design pattern og lager en fabrikk med to metoder:
+ * Create Unit og Create List of Units.
  */
 
 public class UnitFactory {

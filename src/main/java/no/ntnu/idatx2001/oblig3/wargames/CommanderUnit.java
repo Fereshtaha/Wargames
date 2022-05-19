@@ -19,7 +19,7 @@ public class CommanderUnit extends CavalryUnit {
     }
 
     /**
-     * Forenklet konstruktør med attack satt lik 25 og armor lik 15.
+     * Forenklet konstruktør med angrep (attack) satt lik 25 og rustning (armor) lik 15.
      * @param name navnet til uniten
      * @param health livet til uniten
      */

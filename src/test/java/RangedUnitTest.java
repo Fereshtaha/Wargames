@@ -26,12 +26,18 @@ class RangedUnitTest {
     @Test
     void test_getAttackBonus() {
         RangedUnit rangedUnit = new RangedUnit("Swordman", 20);
+        RangedUnit rangedUnit1 = new RangedUnit("Swordman", 20, 10, 5, Terrain.FOREST);
+        RangedUnit rangedUnit2 = new RangedUnit("Swordman", 20, 10, 5, Terrain.HILL);
+
         assertEquals(3, rangedUnit.getAttackBonus());
+        assertEquals(2, rangedUnit1.getAttackBonus());
+        assertEquals(4, rangedUnit2.getAttackBonus());
     }
 
     @Test
     void test_getResistBonus() {
         RangedUnit rangedUnit = new RangedUnit("Swordwoman", 25);
+
         assertEquals(6,rangedUnit.getResistBonus());
         assertEquals(4,rangedUnit.getResistBonus());
         assertEquals(2,rangedUnit.getResistBonus());
